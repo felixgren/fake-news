@@ -7,60 +7,59 @@ declare(strict_types=1);
 
 
 $authors = [
-    'ID' => 1,
-    'FullName' => 'Josef Duck'
+    [
+        'ID' => 1,
+        'FullName' => 'Felix'
+    ],
+    [
+        'ID' => 2,
+        'FullName' => 'Josef'
+    ]
 ];
 
-/*
+
 $articles = [
     [
         'title' => 'The first article',
         'content' => 'Bla bla bla',
-        'author' => 'Felixcool123',
-        'publishedDate' => '2020-10-20',
+        'authorID' => 1,
+        'publishedDate' => '2020-10-01',
         'likes' => 10
     ],
     [
         'title' => 'The second article',
         'content' => 'Bla bla bla',
-        'author' => 'Felixcool123',
-        'publishedDate' => ['2020-10-20'],
-        'likes' => [10, 50, 30, 60]
-    ]
-];
-*/
-
-$articles = [
-    'title' => ['The first article', 'The second article']
-];
-
-$articles2 = [
-    [
-        'title' => 'The first article'
+        'authorID' => 1,
+        'publishedDate' => '2020-10-02',
+        'likes' => 20
     ],
     [
-        'title' => 'The second article'
-    ]
+        'title' => 'The third article',
+        'content' => 'Bla bla bla',
+        'authorID' => 1,
+        'publishedDate' => '2020-10-03',
+        'likes' => 30
+    ],
+    [
+        'title' => 'The fourth article',
+        'content' => 'Bla bla bla',
+        'authorID' => 2,
+        'publishedDate' => '2020-10-04',
+        'likes' => 40
+    ],
+    [
+        'title' => 'The fifth article',
+        'content' => 'Bla bla bla',
+        'authorID' => 2,
+        'publishedDate' => '2020-10-05',
+        'likes' => 50
+    ],
 ];
 
-//echo $articles['title'][1];
-
-echo "Forloop: \n";
-for ($i = 0; $i < 2; $i++) {
-    echo $articles['title'][$i] . "\n";
-}
-
-for ($i = 0; $i < 2; $i++) {
-    echo $articles2[$i]['title'] . "\n";
-}
-
-echo "\nForeach: \n";
 foreach ($articles as $article) {
-    //echo $articles['title'][$article];
-    //this no work 
-    print_r($article);
-}
-
-foreach ($articles2 as $article) {
-    echo $article['title'];
+    echo $article['title'] . "\n";
+    echo $article['content'] . "\n";
+    echo $article['authorID'] . "\n";
+    echo $article['publishedDate'] . "\n";
+    echo $article['likes'] . "\n";
 }

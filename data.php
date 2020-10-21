@@ -8,47 +8,48 @@ declare(strict_types=1);
 
 $authors = [
     [
-        'fullName' => 'Felix'
+        'fullName' => 'Felix',
+        'ID' => 1
     ],
     [
-        'fullName' => 'Josef'
+        'fullName' => 'Josef',
+        'ID' => 2
     ]
 ];
-
 
 $articles = [
     [
         'title' => 'The first article',
         'content' => 'Bla bla bla',
-        'authorID' => 0,
+        'authorID' => 1,
         'publishedDate' => '2020-10-01',
         'likes' => 10
     ],
     [
         'title' => 'The second article',
         'content' => 'Bla bla bla',
-        'authorID' => 0,
+        'authorID' => 1,
         'publishedDate' => '2020-10-02',
         'likes' => 20
     ],
     [
         'title' => 'The third article',
         'content' => 'Bla bla bla',
-        'authorID' => 0,
+        'authorID' => 1,
         'publishedDate' => '2020-10-03',
         'likes' => 30
     ],
     [
         'title' => 'The fourth article',
         'content' => 'Bla bla bla',
-        'authorID' => 1,
+        'authorID' => 2,
         'publishedDate' => '2020-10-04',
         'likes' => 40
     ],
     [
         'title' => 'The fifth article',
         'content' => 'Bla bla bla',
-        'authorID' => 1,
+        'authorID' => 2,
         'publishedDate' => '2020-10-05',
         'likes' => 50
     ],

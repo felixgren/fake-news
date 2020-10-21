@@ -6,6 +6,7 @@
 
 require __DIR__ . '/functions.php';
 require __DIR__ . '/data.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,10 +21,10 @@ require __DIR__ . '/data.php';
 <body>
     <?php foreach ($articles as $article) : ?>
         <article>
-            <p><?= $article['title'] ?></p>
+            <p><b><?= $article['title'] ?></b></p>
             <p><?= $article['content'] ?></p>
             <p><?= $article['authorID'] ?></p>
-            <p><?= $authors[$article['authorID']]['fullName'] ?></p>
+            <p><?= getName($article['authorID'], $authors) ?></p>
         </article>
     <?php endforeach ?>
 </body>

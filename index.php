@@ -20,8 +20,10 @@ require __DIR__ . '/data.php';
 
 <body>
     <?php foreach ($articles as $article) : ?>
+        <?php //print_r($article) 
+        ?>
         <article>
-            <img src="<?= $article['image'] ?>" alt="">
+            <img src="<?= $article['image'] ?>" alt="<?= $article['imageAlt'] ?>">
             <p><b><?= $article['title'] ?></b></p>
             <p><?= $article['publishedDate'] ?></p>
             <p><?= $article['content'] ?></p>

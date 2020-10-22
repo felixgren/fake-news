@@ -24,7 +24,7 @@ $articles = [
         'title' => 'The first article',
         'content' => 'Bla bla bla',
         'authorID' => 1,
-        'publishedDate' => '2020-10-01',
+        'publishedDate' => new DateTime('@1601562060'), //UNIX time stamp
         'likes' => 10
     ],
     [
@@ -33,7 +33,7 @@ $articles = [
         'title' => 'The second article',
         'content' => 'Bla bla bla',
         'authorID' => 1,
-        'publishedDate' => '2020-10-02',
+        'publishedDate' => new DateTime('@1601596800'),
         'likes' => 20
     ],
     [
@@ -42,7 +42,7 @@ $articles = [
         'title' => 'The third article',
         'content' => 'Bla bla bla',
         'authorID' => 1,
-        'publishedDate' => '2020-10-03',
+        'publishedDate' => new DateTime('@1601683200'),
         'likes' => 30
     ],
     [
@@ -51,7 +51,7 @@ $articles = [
         'title' => 'The fourth article',
         'content' => 'Bla bla bla',
         'authorID' => 2,
-        'publishedDate' => '2020-10-04',
+        'publishedDate' => new DateTime('@1601769600'),
         'likes' => 40
     ],
     [
@@ -60,17 +60,7 @@ $articles = [
         'title' => 'The fifth article',
         'content' => 'Bla bla bla',
         'authorID' => 2,
-        'publishedDate' => '2020-10-05',
+        'publishedDate' => new DateTime('@1601856000'),
         'likes' => 50
     ],
 ];
-
-/*
-foreach ($articles as $article) {
-    echo $article['title'] . "\n";
-    echo $article['content'] . "\n";
-    echo $article['authorID'] . "\n";
-    echo $article['publishedDate'] . "\n";
-    echo $article['likes'] . "\n";
-}
-*/

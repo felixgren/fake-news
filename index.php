@@ -19,13 +19,13 @@ require __DIR__ . '/data.php';
 </head>
 
 <body>
-    <?php foreach ($articles as $article) : ?>
+    <?php foreach (sortByDate($articles) as $article) : ?>
         <?php //print_r($article) 
         ?>
         <article>
             <img src="<?= $article['image'] ?>" alt="<?= $article['imageAlt'] ?>">
             <p><b><?= $article['title'] ?></b></p>
-            <p><?= $article['publishedDate'] ?></p>
+            <p><?= DateToString($article['publishedDate']) ?></p>
             <p><?= $article['content'] ?></p>
             <p><?= getName($article['authorID'], $authors) ?></p>
             <p><?= $article['likes'] ?></p>

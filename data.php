@@ -19,6 +19,7 @@ $authors = [
 
 $articles = [
     [
+        'image' => 'https://i.kinja-img.com/gawker-media/image/upload/c_scale,f_auto,fl_progressive,pg_1,q_80,w_800/rxqv0gtluylqsy5ckqka.jpg',
         'title' => 'The first article',
         'content' => 'Bla bla bla',
         'authorID' => 1,
@@ -26,6 +27,7 @@ $articles = [
         'likes' => 10
     ],
     [
+        'image' => 'https://i.kinja-img.com/gawker-media/image/upload/c_scale,f_auto,fl_progressive,pg_1,q_80,w_800/o1mvoz4e4vlucohbor8z.jpg',
         'title' => 'The second article',
         'content' => 'Bla bla bla',
         'authorID' => 1,
@@ -33,6 +35,7 @@ $articles = [
         'likes' => 20
     ],
     [
+        'image' => 'https://media3.giphy.com/media/ACVoiOEjbA6nC/giphy.gif',
         'title' => 'The third article',
         'content' => 'Bla bla bla',
         'authorID' => 1,
@@ -40,6 +43,7 @@ $articles = [
         'likes' => 30
     ],
     [
+        'image' => 'https://media3.giphy.com/media/ACVoiOEjbA6nC/giphy.gif',
         'title' => 'The fourth article',
         'content' => 'Bla bla bla',
         'authorID' => 2,
@@ -47,6 +51,7 @@ $articles = [
         'likes' => 40
     ],
     [
+        'image' => 'https://media3.giphy.com/media/ACVoiOEjbA6nC/giphy.gif',
         'title' => 'The fifth article',
         'content' => 'Bla bla bla',
         'authorID' => 2,

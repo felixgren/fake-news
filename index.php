@@ -21,11 +21,14 @@ require __DIR__ . '/data.php';
 <body>
     <?php foreach ($articles as $article) : ?>
         <article>
+            <img src="<?= $article['image'] ?>" alt="">
             <p><b><?= $article['title'] ?></b></p>
+            <p><?= $article['publishedDate'] ?></p>
             <p><?= $article['content'] ?></p>
-            <p><?= $article['authorID'] ?></p>
             <p><?= getName($article['authorID'], $authors) ?></p>
+            <p><?= $article['likes'] ?></p>
         </article>
+        <br>
     <?php endforeach ?>
 </body>
 

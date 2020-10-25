@@ -38,10 +38,33 @@ p {
 
 .article-text p {
     margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* Only display 6 lines of text*/
+    overflow: hidden; /* Hide the rest */
+    -webkit-box-orient: vertical;
 }
 
 .article-text p:last-child {
     margin-bottom: 0;
+}
+
+.article-text p:first-child {
+    position: relative;
+}
+
+.article-text p:first-child:after { /* :after is used to position the absolute block dynamically to where the parent (p tag) ends */
+    content: ""; /* To come into existance */
+    position: absolute;
+    width: 100%;
+    top: 50%; /* Content block begins 50% from the top of parent (p tag) */
+    left: 0; /* Begin at the left edge of parent, defaults to end of p tag without this */
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%);
+    /* background-color: tomato; */
+}
+
+.article-text p:not(:nth-child(1)) { /* Only display first p tag */
+    display: none;
 }
 
 article footer {

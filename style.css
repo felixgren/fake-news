@@ -3,13 +3,33 @@
     margin: 0;
 }
 
+body {
+    background: grey;
+}
+
+article {
+    max-width: 375px;
+    background: #FFF;
+    margin: auto;
+    padding: 0 10px 30px;
+}
+
 img {
-    width: 500px;
+    width: calc(100% + 20px);
+    margin: 0 -10px;
 }
 
 h2 {
     font-family: 'PT Serif', sans-serif;
     font-weight: 700;
+    font-size: 24px;
+}
+
+.published-date {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 14px;
+    opacity: 0.75;
+    margin: 5px 0px;
 }
 
 p {
@@ -24,6 +44,28 @@ p {
     margin-bottom: 0;
 }
 
-.published-date {
-    font-family: 'Public Sans', sans-serif;
+article footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 4px;
+}
+
+article footer a, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+article footer .likes { /* keep in mind that adding selectors increases specificity (overrides top to bottom prioritization) */
+    display: flex;
+    align-items: center;
+}
+
+article footer .read-more {
+    display: flex;
+    align-items: center;
+    margin: 0 7px 0;
+}
+
+hr {
+    border: 2px solid #c4c4c4;
 }

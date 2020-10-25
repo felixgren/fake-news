@@ -30,6 +30,7 @@ require __DIR__ . '/data.php';
         $content = $article['content'];
         $author = getName($article['authorID'], $authors);
         $likes = $article['likes'];
+        $link = strtolower(str_replace(" ", "-", $title));
         ?>
 
         <article>
@@ -45,7 +46,7 @@ require __DIR__ . '/data.php';
                         <path fill="#F44336" d="M34 9c-4.2 0-7.9 2.1-10 5.4C21.9 11.1 18.2 9 14 9C7.4 9 2 14.4 2 21c0 11.9 22 24 22 24s22-12 22-24c0-6.6-5.4-12-12-12z" /></svg>
                     <p><?= $likes ?></p>
                 </div>
-                <a class="read-more" href="/<?= $title ?>">
+                <a class="read-more" href="/<?= $link ?>">
                     <p>Read more</p>
                     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="30" height="30" viewBox="0 0 16 16">
                         <g fill="#000">

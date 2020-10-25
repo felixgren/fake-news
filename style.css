@@ -17,6 +17,9 @@ article {
 img {
     width: calc(100% + 20px);
     margin: 0 -10px;
+    object-fit: cover;
+    object-position: top; /* CAT */
+    height: 215px;
 }
 
 h2 {

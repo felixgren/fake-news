@@ -18,12 +18,12 @@ function getName(int $authorID, array $authors): string
 function sortByDate(array $articlesArray): array
 {
     usort($articlesArray, function ($a, $b) {
-        return $b['publishedDate'] <=> $a['publishedDate'];
+        return $a['publishedDate'] <=> $b['publishedDate'];
     });
     return $articlesArray;
 }
 
-function DateToString(object $DateTime): string
+function dateToString(object $DateTime): string
 {
     return $DateTime->format('Y-m-d H:i');
 }

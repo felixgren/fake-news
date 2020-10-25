@@ -25,10 +25,13 @@ require __DIR__ . '/data.php';
         <article>
             <img src="<?= $article['image'] ?>" alt="<?= $article['imageAlt'] ?>">
             <p><b><?= $article['title'] ?></b></p>
-            <p><?= DateToString($article['publishedDate']) ?></p>
-            <p><?= $article['content'] ?></p>
+            <p><?= dateToString($article['publishedDate']) ?></p>
+            <div class="articleText"><?= $article['content'] ?></div>
             <p><?= getName($article['authorID'], $authors) ?></p>
             <p><?= $article['likes'] ?></p>
+            <a href="/<?= $article['title'] ?>">
+                <p>Read more</p>
+            </a>
         </article>
         <br>
     <?php endforeach ?>

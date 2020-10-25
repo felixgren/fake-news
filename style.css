@@ -6,3 +6,11 @@
 img {
     width: 500px;
 }
+
+.articleText p {
+    margin-bottom: 20px;
+}
+
+.articleText p:last-child {
+    margin-bottom: 0;
+}

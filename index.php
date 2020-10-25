@@ -16,24 +16,37 @@ require __DIR__ . '/data.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fake News</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Public+Sans:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <?php foreach (sortByDate($articles) as $article) : ?>
-        <?php //print_r($article) 
+
+        <?php
+        $image = $article['image'];
+        $imageAlt = $article['imageAlt'];
+        $title = $article['title'];
+        $date = dateToString($article['publishedDate']);
+        $content = $article['content'];
+        $author = getName($article['authorID'], $authors);
+        $likes = $article['likes'];
         ?>
+
         <article>
-            <img src="<?= $article['image'] ?>" alt="<?= $article['imageAlt'] ?>">
-            <p><b><?= $article['title'] ?></b></p>
-            <p><?= dateToString($article['publishedDate']) ?></p>
-            <div class="articleText"><?= $article['content'] ?></div>
-            <p><?= getName($article['authorID'], $authors) ?></p>
-            <p><?= $article['likes'] ?></p>
-            <a href="/<?= $article['title'] ?>">
+            <img src="<?= $image ?>" alt="<?= $imageAlt ?>">
+            <h2><?= $title ?></h2>
+            <p><?= $date ?></p>
+            <div class="articleText">
+                <?= $article['content'] ?>
+            </div>
+            <p><?= $author ?></p>
+            <p><?= $likes ?></p>
+            <a href="/<?= $title ?>">
                 <p>Read more</p>
             </a>
         </article>
         <br>
+
     <?php endforeach ?>
 </body>
 

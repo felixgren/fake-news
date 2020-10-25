@@ -7,10 +7,23 @@ img {
     width: 500px;
 }
 
-.articleText p {
+h2 {
+    font-family: 'PT Serif', sans-serif;
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.article-text p {
     margin-bottom: 20px;
 }
 
-.articleText p:last-child {
+.article-text p:last-child {
     margin-bottom: 0;
+}
+
+.published-date {
+    font-family: 'Public Sans', sans-serif;
 }

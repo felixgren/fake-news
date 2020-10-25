@@ -23,7 +23,12 @@ function sortByDate(array $articlesArray): array
     return $articlesArray;
 }
 
-function dateToString(object $DateTime): string
+function dateLongFormat(object $DateTime): string
 {
     return $DateTime->format('Y-m-d H:i');
+}
+
+function dateShortFormat(object $DateTime): string
+{
+    return $DateTime->format('j F Y');
 }

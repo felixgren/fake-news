@@ -26,7 +26,7 @@ require __DIR__ . '/data.php';
         $image = $article['image'];
         $imageAlt = $article['imageAlt'];
         $title = $article['title'];
-        $date = dateToString($article['publishedDate']);
+        $date = strtoupper(dateShortFormat($article['publishedDate']));
         $content = $article['content'];
         $author = getName($article['authorID'], $authors);
         $likes = $article['likes'];
@@ -35,11 +35,11 @@ require __DIR__ . '/data.php';
         <article>
             <img src="<?= $image ?>" alt="<?= $imageAlt ?>">
             <h2><?= $title ?></h2>
-            <p><?= $date ?></p>
-            <div class="articleText">
-                <?= $article['content'] ?>
+            <p class="published-date"><?= $date ?></p>
+            <div class="article-text">
+                <?= $content ?>
             </div>
-            <p><?= $author ?></p>
+            <p class="author"><?= $author ?></p>
             <p><?= $likes ?></p>
             <a href="/<?= $title ?>">
                 <p>Read more</p>

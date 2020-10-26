@@ -28,7 +28,7 @@ require __DIR__ . '/data.php';
         $title = $article['title'];
         $date = strtoupper(dateShortFormat($article['publishedDate']));
         $content = $article['content'];
-        $author = getName($article['authorID'], $authors);
+        //$author = getName($article['authorID'], $authors);
         $likes = $article['likes'];
         $link = strtolower(str_replace(" ", "-", $title));
         ?>
@@ -37,7 +37,7 @@ require __DIR__ . '/data.php';
             <img src="<?= $image ?>" alt="<?= $imageAlt ?>">
             <h2><?= $title ?></h2>
             <p class="published-date"><?= $date ?></p>
-            <div class="article-text">
+            <div class="article-text clamp fade hide">
                 <?= $content ?>
             </div>
             <footer>

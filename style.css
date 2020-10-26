@@ -41,6 +41,9 @@ p {
 
 .article-text p {
     margin-bottom: 20px;
+}
+
+.clamp p {
     display: -webkit-box;
     -webkit-line-clamp: 6; /* Only display 6 lines of text*/
     overflow: hidden; /* Hide the rest */
@@ -51,11 +54,11 @@ p {
     margin-bottom: 0;
 }
 
-.article-text p:first-child {
+.fade p:first-child {
     position: relative;
 }
 
-.article-text p:first-child:after { /* :after is used to position the absolute block dynamically to where the parent (p tag) ends */
+.fade p:first-child:after { /* :after is used to position the absolute block dynamically to where the parent (p tag) ends */
     content: ""; /* To come into existance */
     position: absolute;
     width: 100%;
@@ -66,7 +69,7 @@ p {
     /* background-color: tomato; */
 }
 
-.article-text p:not(:nth-child(1)) { /* Only display first p tag */
+.hide p:not(:nth-child(1)) { /* Only display first p tag */
     display: none;
 }
 
@@ -94,4 +97,8 @@ article footer .read-more {
 
 hr {
     border: 2px solid #c4c4c4;
+}
+
+.hr-space {
+    margin-top: 16px;
 }

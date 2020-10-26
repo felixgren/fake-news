@@ -15,6 +15,15 @@ function getName(int $authorID, array $authors): string
     }
 }
 
+function getArticle(string $link, array $articles): array
+{
+    foreach ($articles as $article) {
+        if ($link === strtolower(str_replace(" ", "-", $article['title']))) {
+            return $article;
+        }
+    }
+}
+
 function sortByDate(array $articlesArray): array
 {
     usort($articlesArray, function ($a, $b) {

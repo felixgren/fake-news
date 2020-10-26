@@ -3,6 +3,8 @@
 require __DIR__ . '/functions.php';
 require __DIR__ . '/data.php';
 
-$id = $_GET['magic'];
+$link = $_GET['magic'];
 
-echo $id;
+$article = getArticle($link, $articles);
+
+print_r($article);

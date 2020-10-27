@@ -65,6 +65,17 @@ $articles = [
         'content' => '<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos obcaecati blanditiis facilis expedita amet, quo id. Delectus perspiciatis provident voluptas et, placeat maxime aliquid? Quia dolore itaque praesentium. Optio, voluptatum!</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos obcaecati blanditiis facilis expedita amet, quo id. Delectus perspiciatis provident voluptas et, placeat maxime aliquid? Quia dolore itaque praesentium. Optio, voluptatum!</p>',
         'authorID' => 2,
         'publishedDate' => new DateTime('@1601856000'),
+        'category' => 'local',
         'likes' => 50
+    ],
+    [
+        'image' => 'https://media3.giphy.com/media/ACVoiOEjbA6nC/giphy.gif',
+        'imageAlt' => 'Cat dancing',
+        'title' => 'The sixth article',
+        'content' => '<p>I am article</p>',
+        'authorID' => 1,
+        'publishedDate' => new DateTime('@1601856000'),
+        'category' => 'career',
+        'likes' => 60
     ],
 ];

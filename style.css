@@ -7,6 +7,110 @@ body {
     background: grey;
 }
 
+.navbar-mobile {
+    /* transform: translateY(0%); */
+    transition: 0.3s ease-out;
+    width: 100%;
+    height: 50px;
+    background-color: royalblue;
+    position: fixed;
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px 0 10px;
+}
+
+.navbar-mobile a {
+    text-decoration: none;
+    font-size: 36px;
+    font-family: 'PT Serif', sans-serif;
+    color: #fff;
+}
+
+.navbar-mobile-hide {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.overlay-mobile {
+    transition: 0.3s ease-out;
+    transform: translateX(100%);
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 80%;
+    margin-left: 20%;
+    z-index: 200;
+    background-color: royalblue;
+}
+
+.overlay-mobile a {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 30px;
+    font-size: 42px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.overlay-mobile-links {
+    margin-top: 150px;
+}
+
+.overlay-mobile-active {
+    transform: translateX(0px);
+    /* box-shadow: -200px 0px 2000px black; */
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    z-index: 1000000;
+    position: fixed;
+    top: 3px;
+    right: 10px;
+}
+
+.burger-active {
+}
+
+.line-1, .line-2, .line-3 {
+    width: 26px;
+    height: 2px;
+    background-color: #fff;
+    transition: 0.3s;
+    margin: 3px 0;
+}
+
+.burger-active .line-1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger-active .line-2 {
+    opacity: 0;
+}
+
+.burger-active .line-3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.active-tab {
+    padding-top: 50px;
+    width: 375px;
+    height: 90px;
+    background-color: tomato;
+}
+
+.active-tab p {
+    padding: 10px;
+    color: black;
+}
+
 article {
     max-width: 375px;
     background: #FFF;
@@ -79,7 +183,7 @@ article footer {
     margin: 10px 0 4px;
 }
 
-article footer a, a:visited {
+article footer a, article footer a:visited {
     text-decoration: none;
     color: black;
 }

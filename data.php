@@ -78,4 +78,14 @@ $articles = [
         'category' => 'career',
         'likes' => 60
     ],
+    [
+        'image' => 'https://media3.giphy.com/media/ACVoiOEjbA6nC/giphy.gif',
+        'imageAlt' => 'Cat dancing',
+        'title' => 'The sixth article',
+        'content' => '<p>I am article</p>',
+        'authorID' => 1,
+        'publishedDate' => new DateTime('@1601856000'),
+        'category' => 'career',
+        'likes' => 60
+    ],
 ];

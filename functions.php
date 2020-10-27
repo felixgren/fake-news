@@ -27,12 +27,11 @@ function getArticle(string $link, array $articles): array
 function getSortedArticles(string $category, array $articles): array
 {
     sortByDate($articles);
+
     if ($category != "") {
-        foreach ($articles as $article) {
-            if ($category === $article['category']) {
-                $filteredArray[] = $article;
-            }
-        }
+        $filteredArray = array_filter($articles, function (array $articles) use ($category): bool {
+            return ($category === $articles['category']) ? true : false;
+        });
         return $filteredArray;
     }
     return $articles;

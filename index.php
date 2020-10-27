@@ -25,14 +25,34 @@ if (isset($_GET['category'])) {
 </head>
 
 <body>
-    <?php if ($categoryTest != "") : ?>
-        <p><?= $categoryTest ?></p>
-    <?php endif ?>
+    <header>
+        <nav class="overlay-mobile">
+            <div class="overlay-mobile-links">
+                <a href="/"> Home </a>
+                <a href="/?category=technology"> Technology </a>
+                <a href="/?category=career"> Career </a>
+                <a href="/?category=local"> Local </a>
+            </div>
+        </nav>
 
-    <a href="/">index</a>
-    <a href="/?category=technology">technology</a>
-    <a href="/?category=career">career</a>
-    <a href="/?category=local">local</a>
+        <div class="navbar-mobile">
+            <a href="/">FAKE NEWS</a>
+        </div>
+
+        <div class="burger">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+        </div>
+
+        <div class="active-tab">
+            <?php if ($categoryTest != "") : ?>
+                <p><?= ucfirst($categoryTest) ?></p>
+            <?php else : ?>
+                <p> All articles </p>
+            <?php endif ?>
+        </div>
+    </header>
 
     <?php foreach (getSortedArticles($categoryTest, $articles) as $article) : ?>
 
@@ -74,6 +94,7 @@ if (isset($_GET['category'])) {
         </article>
 
     <?php endforeach ?>
+    <script src="script.js"></script>
 </body>
 
 </html>

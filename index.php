@@ -7,6 +7,11 @@
 require __DIR__ . '/functions.php';
 require __DIR__ . '/data.php';
 
+$categoryTest = "";
+if (isset($_GET['category'])) {
+    $categoryTest = $_GET['category'];
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +25,16 @@ require __DIR__ . '/data.php';
 </head>
 
 <body>
-    <?php foreach (sortByDate($articles) as $article) : ?>
+    <?php if ($categoryTest != "") : ?>
+        <p><?= $categoryTest ?></p>
+    <?php endif ?>
+
+    <a href="/">index</a>
+    <a href="/?category=technology">technology</a>
+    <a href="/?category=career">career</a>
+    <a href="/?category=local">local</a>
+
+    <?php foreach (getSortedArticles($categoryTest, $articles) as $article) : ?>
 
         <?php
         $image = $article['image'];

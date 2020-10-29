@@ -21,7 +21,7 @@ if (isset($_GET['category'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fake News</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Public+Sans:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Public+Sans:wght@400;600&family=Roboto&family=Syne:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -36,13 +36,15 @@ if (isset($_GET['category'])) {
         </nav>
 
         <div class="navbar-mobile">
-            <a href="/">FAKE NEWS</a>
+            <a href="/">Fake News</a>
         </div>
 
-        <div class="burger">
-            <div class="line-1"></div>
-            <div class="line-2"></div>
-            <div class="line-3"></div>
+        <div class="burger-wrap">
+            <div class="burger">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+            </div>
         </div>
 
         <div class="active-tab">

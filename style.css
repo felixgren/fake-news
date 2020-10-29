@@ -4,7 +4,12 @@
 }
 
 body {
-    background: grey;
+    background: #eeeeee;
+}
+
+header {
+    display: flex;
+    justify-content: center;
 }
 
 .navbar-mobile {
@@ -24,7 +29,8 @@ body {
 .navbar-mobile a {
     text-decoration: none;
     font-size: 36px;
-    font-family: 'PT Serif', sans-serif;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
     color: #fff;
 }
 
@@ -76,9 +82,6 @@ body {
     right: 10px;
 }
 
-.burger-active {
-}
-
 .line-1, .line-2, .line-3 {
     width: 26px;
     height: 2px;
@@ -100,22 +103,25 @@ body {
 }
 
 .active-tab {
+    max-width: 800px;
+    width: 100%;
     padding-top: 50px;
-    width: 375px;
     height: 90px;
-    background-color: tomato;
+    background-color: darkgray;
 }
 
 .active-tab p {
     padding: 10px;
     color: black;
+    font-family: 'Public Sans', sans-serif;
 }
 
 article {
-    max-width: 375px;
+    max-width: 800px;
     background: #FFF;
     margin: auto;
     padding: 0 10px 30px;
+    box-shadow: 0px 0px 5px 0px rgb(190, 190, 190);
 }
 
 img {
@@ -205,4 +211,27 @@ hr {
 
 .hr-space {
     margin-top: 16px;
+}
+
+@media (min-width: 470px) {
+    img {
+        height: 400px;
+    }
+}
+
+@media (min-width: 700px) {
+    img {
+        height: 400px;
+    }
+
+    h2 {
+        font-family: 'PT Serif', sans-serif;
+        font-weight: 700;
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
 }

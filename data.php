@@ -12,10 +12,4 @@ $statement = $pdo->query('SELECT * FROM articles');
 
 // Fetch all rows with the fetchAll method using the PDO constant FETCH_ASSOC to return data
 // as an array indexed by DB column name, effectively turning it into an associative array.
-$articlesDB = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-print_r($articlesDB[1]);
-
-echo "Normal array below... \n";
-
-print_r($articles[1]);
+$articles = $statement->fetchAll(PDO::FETCH_ASSOC);

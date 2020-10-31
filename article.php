@@ -9,11 +9,11 @@ $article = getArticle($link, $articles);
 
 //this should be optimized and not repeated from index
 $image = $article['image'];
-$imageAlt = $article['imageAlt'];
+$imageAlt = $article['image_alt'];
 $title = $article['title'];
-$date = strtoupper(dateShortFormat($article['publishedDate']));
+$date = strtoupper(dateShortFormat($article['published_date']));
 $content = $article['content'];
-$author = getName($article['authorID'], $authors);
+$author = getName($article['author_id'], $authors);
 $likes = $article['likes'];
 $link = strtolower(str_replace(" ", "-", $title));
 
@@ -36,6 +36,7 @@ $link = strtolower(str_replace(" ", "-", $title));
         <p class="published-date"><?= $date ?></p>
         <div class="article-text">
             <?= $content ?>
+            <?= $author ?>
         </div>
         <hr class="hr-space" />
         <footer>

@@ -61,11 +61,10 @@ if (isset($_GET['category'])) {
 
         <?php
         $image = $article['image'];
-        $imageAlt = $article['imageAlt'];
+        $imageAlt = $article['image_alt'];
         $title = $article['title'];
-        $date = strtoupper(dateShortFormat($article['publishedDate']));
+        $date = strtoupper(dateShortFormat($article['published_date']));
         $content = $article['content'];
-        //$author = getName($article['authorID'], $authors);
         $likes = $article['likes'];
         $link = strtolower(str_replace(" ", "-", $title));
         ?>

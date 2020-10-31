@@ -40,7 +40,7 @@ function getSortedArticles(string $category, array $articles): array
 function sortByDate(array $articlesArray): array
 {
     usort($articlesArray, function ($a, $b) {
-        return $a['publishedDate'] <=> $b['publishedDate'];
+        return $a['published_date'] <=> $b['published_date'];
     });
     return $articlesArray;
 }
@@ -50,7 +50,8 @@ function dateLongFormat(object $DateTime): string
     return $DateTime->format('Y-m-d H:i');
 }
 
-function dateShortFormat(object $DateTime): string
+function dateShortFormat(int $unixTime): string
 {
-    return $DateTime->format('j F Y');
+    $date = new DateTime("@$unixTime");
+    return $date->format('Y-m-d H:i');
 }

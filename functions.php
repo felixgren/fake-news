@@ -5,12 +5,12 @@ declare(strict_types=1);
 // This is the file where you can keep all your functions. Remember to NOT
 // execute/run any functions in this file. Keep it dumb.
 
-//Loops through $authors array and prints fullName if ID matches AuthorID argument
-function getName(int $authorID, array $authors): string
+//Loops through $authors array and prints name if ID matches Author_ID argument
+function getName(int $author_id, array $authors)
 {
     foreach ($authors as $author) {
-        if ($authorID === $author['ID']) {
-            return $author['fullName'];
+        if ($author_id === intval($author['id'])) { // DB fetch converts all ints to strings so intval is required to convert back to int
+            return $author['name'];
         }
     }
 }

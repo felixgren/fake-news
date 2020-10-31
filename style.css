@@ -197,15 +197,50 @@ article footer a, article footer a:visited {
     color: black;
 }
 
-article footer .likes { /* keep in mind that adding selectors increases specificity (overrides top to bottom prioritization) */
+.likes { /* keep in mind that adding selectors increases specificity (overrides top to bottom prioritization) */
     display: flex;
     align-items: center;
 }
 
-article footer .read-more {
+.likes-article {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.likes p, .likes-article p {
+    margin: 5px 3px 0;
+}
+
+.author {
+    display: flex;
+    align-items:center;
+}
+
+.author p {
+    margin-left: 3px;
+    font-weight: 600;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.published-date-article {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 14px;
+    opacity: 0.75;
+    margin-left: 28px;
+}
+
+.article-page {
+    border-top: 50px solid black;
+    padding-bottom: 10px;
+}
+
+.read-more {
     display: flex;
     align-items: center;
     margin: 0 7px 0;
+    height: 24px;
 }
 
 hr {

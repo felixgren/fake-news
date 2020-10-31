@@ -5,6 +5,7 @@
 // of the files containing HTML or even better; in another PHP file altogether.
 
 require __DIR__ . '/functions.php';
+//require __DIR__ . '/data_old.php';
 require __DIR__ . '/data.php';
 
 $categoryTest = "";

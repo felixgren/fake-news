@@ -1,3 +1,4 @@
+<div class="page-transition"></div>
 <div class="light-overlay"></div>
 
 <nav class="overlay-mobile">

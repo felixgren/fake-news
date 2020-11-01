@@ -15,7 +15,7 @@ function getName(string $author_id, array $authors): string
 function getArticle(string $link, array $articles): array
 {
     foreach ($articles as $article) {
-        if ($link === strtolower(str_replace(" ", "-", $article['title']))) {
+        if ($link === linkFormat($article['title'])) {
             return $article;
         }
     }
@@ -52,4 +52,12 @@ function dateLongFormat(string $unixTime): string
 {
     $date = new DateTime("@$unixTime");
     return $date->format('Y-m-d H:i');
+}
+
+// Replace incompatible characters and spaces from link
+function linkFormat(string $link): string
+{
+    $formatTable = [' ' => '-', 'ä' => 'a', 'å' => 'a', 'ö' => 'o', 'Ä' => 'A', 'Å' => 'A', 'Ö' => 'O'];
+    $link = strtolower(str_replace(array_keys($formatTable), array_values($formatTable), $link));
+    return $link;
 }

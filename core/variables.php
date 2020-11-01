@@ -11,4 +11,4 @@ $content = $article['content'];
 $author = getName($article['author_id'], $authors);
 $articleCategory = $article['category'];
 $likes = $article['likes'];
-$link = strtolower(str_replace(" ", "-", $title));
+$link = linkFormat($title);

@@ -1,8 +1,8 @@
-<?php require __DIR__ . '/head.php'; ?>
+<?php require __DIR__ . '/components/header.php'; ?>
 
 <body>
     <header>
-        <?php require __DIR__ . '/navbar.php'; ?>
+        <?php require __DIR__ . '/components/navbar.php'; ?>
 
         <div class="active-tab">
             <?php if ($categoryTest != "") : ?>
@@ -14,7 +14,7 @@
     </header>
 
     <?php foreach (getSortedArticles($categoryTest, $articles) as $article) : ?>
-        <?php require __DIR__ . '/variables.php'; ?>
+        <?php require __DIR__ . '/core/variables.php'; ?>
 
         <article>
             <img src="<?= $image ?>" alt="<?= $imageAlt ?>">
@@ -43,4 +43,4 @@
         </article>
 
     <?php endforeach ?>
-    <?php require __DIR__ . '/footer.php'; ?>
+    <?php require __DIR__ . '/components/footer.php'; ?>

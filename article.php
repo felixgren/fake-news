@@ -1,15 +1,15 @@
 <?php
 
-require __DIR__ . '/head.php';
+require __DIR__ . '/components/header.php';
 
 $link = $_GET['magic'];
 $article = getArticle($link, $articles);
-require __DIR__ . '/variables.php';
+require __DIR__ . '/core/variables.php';
 ?>
 
 <body>
     <header>
-        <?php require __DIR__ . '/navbar.php'; ?>
+        <?php require __DIR__ . '/components/navbar.php'; ?>
     </header>
 
     <article class="article-page">
@@ -49,4 +49,4 @@ require __DIR__ . '/variables.php';
         </footer>
 
     </article>
-    <?php require __DIR__ . '/footer.php'; ?>
+    <?php require __DIR__ . '/components/footer.php'; ?>

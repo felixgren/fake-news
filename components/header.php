@@ -2,9 +2,9 @@
 require dirname(__DIR__, 1) . '/core/functions.php';
 require dirname(__DIR__, 1) . '/core/data.php';
 
-$categoryTest = "";
+$activeCategory = "";
 if (isset($_GET['category'])) {
-    $categoryTest = $_GET['category'];
+    $activeCategory = $_GET['category'];
 }
 ?>
 

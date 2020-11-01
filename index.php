@@ -5,21 +5,25 @@
         <?php require __DIR__ . '/components/navbar.php'; ?>
 
         <div class="active-tab">
-            <?php if ($categoryTest != "") : ?>
-                <p><?= ucfirst($categoryTest) ?></p>
+            <?php if ($activeCategory != "") : ?>
+                <p><?= ucfirst($activeCategory) ?></p>
             <?php else : ?>
                 <p> All articles </p>
             <?php endif ?>
         </div>
     </header>
 
-    <?php foreach (getSortedArticles($categoryTest, $articles) as $article) : ?>
+    <?php foreach (getSortedArticles($activeCategory, $articles) as $article) : ?>
         <?php require __DIR__ . '/core/variables.php'; ?>
 
         <article>
             <img src="<?= $image ?>" alt="<?= $imageAlt ?>">
             <h2><?= $title ?></h2>
-            <p class="published-date"><?= $date ?></p>
+            <div class="info-wrapper">
+                <p><?= $dateShort ?></p>
+                <p>•</p>
+                <a href="/?category=<?= $articleCategory ?>"><?= strtoupper($articleCategory) ?></a>
+            </div>
             <div class="article-text clamp fade hide">
                 <?= $content ?>
             </div>

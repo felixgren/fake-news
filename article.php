@@ -14,7 +14,11 @@ require __DIR__ . '/core/variables.php';
     <article class="article-page">
         <img src="<?= $image ?>" alt="<?= $imageAlt ?>">
         <h2><?= $title ?></h2>
-        <p class="published-date"><?= $date ?></p>
+        <div class="info-wrapper">
+            <p><?= $dateShort ?></p>
+            <p>•</p>
+            <a href="/?category=<?= $articleCategory ?>"><?= strtoupper($articleCategory) ?></a>
+        </div>
         <div class="article-text">
             <?= $content ?>
         </div>
@@ -32,7 +36,7 @@ require __DIR__ . '/core/variables.php';
                     <p><?= $author ?></p>
                 </div>
                 <div>
-                    <p class="published-date-article">Published <?= $date ?></p>
+                    <p class="published-date-article">Published <?= $dateLong ?></p>
                 </div>
             </div>
 

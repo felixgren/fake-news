@@ -42,13 +42,13 @@ function sortByDate(array $articlesArray): array
     return $articlesArray;
 }
 
-// Not used yet
-function dateLongFormat(object $DateTime): string
+function dateShortFormat(string $unixTime): string
 {
-    return $DateTime->format('Y-m-d H:i');
+    $date = new DateTime("@$unixTime");
+    return $date->format('j M H:i');
 }
 
-function dateShortFormat(string $unixTime): string
+function dateLongFormat(string $unixTime): string
 {
     $date = new DateTime("@$unixTime");
     return $date->format('Y-m-d H:i');

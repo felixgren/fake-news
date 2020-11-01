@@ -1,7 +1,6 @@
 <?php
 
 require __DIR__ . '/components/header.php';
-
 $link = $_GET['magic'];
 $article = getArticle($link, $articles);
 require __DIR__ . '/core/variables.php';

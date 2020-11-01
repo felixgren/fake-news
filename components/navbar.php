@@ -1,3 +1,5 @@
+<div class="light-overlay"></div>
+
 <nav class="overlay-mobile">
     <div class="overlay-mobile-links">
         <a href="/"> Home </a>

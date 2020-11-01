@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 $image = $article['image'];
 $imageAlt = $article['image_alt'];
 $title = $article['title'];

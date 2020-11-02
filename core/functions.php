@@ -6,7 +6,7 @@ declare(strict_types=1);
 function getName(string $author_id, array $authors): string
 {
     foreach ($authors as $author) {
-        if ($author_id === $author['id']) { // DB fetch converts all ints to strings so intval is required to convert back to int
+        if ($author_id === $author['id']) {
             return $author['name'];
         }
     }
@@ -57,7 +57,7 @@ function dateLongFormat(string $unixTime): string
 // Replace incompatible characters and spaces from link
 function linkFormat(string $link): string
 {
-    $formatTable = [' ' => '-', 'ä' => 'a', 'å' => 'a', 'ö' => 'o', 'Ä' => 'A', 'Å' => 'A', 'Ö' => 'O'];
+    $formatTable = [' ' => '-', ':' => '-', '’' => '-', ',' => '-', '‘' => '-', 'ä' => 'a', 'å' => 'a', 'ö' => 'o', 'Ä' => 'A', 'Å' => 'A', 'Ö' => 'O'];
     $link = strtolower(str_replace(array_keys($formatTable), array_values($formatTable), $link));
     return $link;
 }

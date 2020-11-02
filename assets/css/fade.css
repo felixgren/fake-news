@@ -5,7 +5,7 @@
     z-index: 500;
     pointer-events: none;
     background: #eee;
-    animation-duration: 250ms;
+    animation-duration: 300ms;
     animation-timing-function: ease-in-out;
     top: 50px;
 }

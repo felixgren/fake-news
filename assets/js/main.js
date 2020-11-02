@@ -21,25 +21,18 @@ document.addEventListener('DOMContentLoaded', function() {
     let links = document.querySelectorAll('a'); // Array of all a tags
 
     links.forEach(link => {
-        
-        // if (link.pathname === window.location.pathname) {
-        //     continue;
-        // }
-
         link.addEventListener("click", function(e){
             let fader = document.querySelector('.page-transition'),
             link = e.currentTarget;
 
             fader.addEventListener('animationend',function() {
                 window.location = link.href;
-                fader.removeEventListener('animationend')  
             });
 
+            fader.removeEventListener('animationend');  
+            overlayMobile.classList.remove("overlay-mobile-active");
+            navbarMobileHide.classList.remove("navbar-mobile-hide");
             e.preventDefault();
-
-            overlayMobile.classList.remove("overlay-mobile-active")
-            navbarMobileHide.classList.remove("navbar-mobile-hide")
-
             fader.classList.add('fade-in');
         })
     });

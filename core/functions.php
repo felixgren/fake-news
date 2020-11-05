@@ -42,16 +42,10 @@ function sortByDate(array $articlesArray): array
     return $articlesArray;
 }
 
-function dateShortFormat(string $unixTime): string
+function dateFormat(string $unixTime, bool $isShort = false): string
 {
     $date = new DateTime("@$unixTime");
-    return $date->format('j M H:i');
-}
-
-function dateLongFormat(string $unixTime): string
-{
-    $date = new DateTime("@$unixTime");
-    return $date->format('Y-m-d H:i');
+    return $date = $date->format($isShort ? 'j M H:i' : 'Y-m-d H:i');
 }
 
 // Replace incompatible characters and spaces from link

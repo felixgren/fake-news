@@ -1,15 +1,15 @@
 'use strict';
 
-let burger = document.querySelector(".burger");
-let overlayMobile  = document.querySelector(".overlay-mobile");
-let navbarMobileHide = document.querySelector(".navbar-mobile");
-let lightOverlay = document.querySelector(".light-overlay");
+let burger = document.querySelector('.burger');
+let overlayMobile  = document.querySelector('.overlay-mobile');
+let navbarMobileHide = document.querySelector('.navbar-mobile');
+let lightOverlay = document.querySelector('.light-overlay');
 
-burger.addEventListener("click", function(){
-    burger.classList.toggle("burger-active")
-    overlayMobile.classList.toggle("overlay-mobile-active")
-    navbarMobileHide.classList.toggle("navbar-mobile-hide")
-    lightOverlay.classList.toggle("light-overlay-active")
+burger.addEventListener('click', function(){
+    burger.classList.toggle('burger-active')
+    overlayMobile.classList.toggle('overlay-mobile-active')
+    navbarMobileHide.classList.toggle('navbar-mobile-hide')
+    lightOverlay.classList.toggle('light-overlay-active')
 })
 
 // Based on https://christopheraue.net/design/fading-pages-on-load-and-unload
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let links = document.querySelectorAll('a'); // Array of all a tags
 
     links.forEach(link => {
-        link.addEventListener("click", function(e){
+        link.addEventListener('click', function(e){
             let fader = document.querySelector('.page-transition'),
             link = e.currentTarget;
 
@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             fader.removeEventListener('animationend');  
-            overlayMobile.classList.remove("overlay-mobile-active");
-            navbarMobileHide.classList.remove("navbar-mobile-hide");
+            overlayMobile.classList.remove('overlay-mobile-active');
+            navbarMobileHide.classList.remove('navbar-mobile-hide');
             e.preventDefault();
             fader.classList.add('fade-in');
         })

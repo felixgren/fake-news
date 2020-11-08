@@ -1,6 +1,8 @@
-<img src="https://media1.tenor.com/images/57a46b42c6d20c33fc1a88ad4bc99aa2/tenor.gif" />
+<img src="https://media1.tenor.com/images/57a46b42c6d20c33fc1a88ad4bc99aa2/tenor.gif" width=100%/>
 
 # Fake News!
+
+<strong>LIVE: https://fake-news-live.herokuapp.com/</strong>
 
 Fake News project
 

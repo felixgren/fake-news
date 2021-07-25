@@ -4,11 +4,11 @@
 
 <strong>LIVE: https://fake-news-live.herokuapp.com/</strong>
 
-Fake News project
+Going through the basics, db, arrays, sorting, that sort of thing. It's running on a free dyno do excuse the slow load.
 
 ## Features
 
-WIP...
+WIP... WIP...
 
 ## Installation
 
